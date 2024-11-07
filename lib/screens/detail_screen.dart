@@ -36,7 +36,7 @@ class _DetailScreenState extends State<DetailScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Image.network(
+            Image.asset(
               widget.recipe.imageUrl,
               height: 200,
               fit: BoxFit.cover,
