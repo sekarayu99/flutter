@@ -2,11 +2,13 @@ class Recipe {
   final String title;
   final String imageUrl;
   final String description;
+  bool isFavorite;
 
   Recipe({
     required this.title,
     required this.imageUrl,
     required this.description,
+    this.isFavorite = false,
   });
 }
 
