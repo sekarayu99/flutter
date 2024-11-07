@@ -13,10 +13,10 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+            crossAxisCount: 2, // 2 kolom per baris
             crossAxisSpacing: 8.0,
             mainAxisSpacing: 8.0,
-            childAspectRatio: 0.75,
+            childAspectRatio: 0.75, // Menyesuaikan aspek rasio untuk foto besar
           ),
           itemCount: recipes.length,
           itemBuilder: (context, index) {
@@ -41,9 +41,10 @@ class HomeScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius:
                             BorderRadius.vertical(top: Radius.circular(10.0)),
-                        child: Image.network(
+                        child: Image.asset(
                           recipe.imageUrl,
                           fit: BoxFit.cover,
+                          width: double.infinity,
                         ),
                       ),
                     ),
